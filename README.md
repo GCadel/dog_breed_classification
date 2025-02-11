@@ -1,6 +1,6 @@
 # DoggieTech Dog Image Classifier
 
-An application used to identify a dog breed.
+An image classification application used to identify a dog breed.
 
 Open the application here:
 
@@ -8,23 +8,17 @@ Open the application here:
 
 ## How to use this application
 
-This is the interactive application where you submit an image of a dog for breed
-identification. Please skip to [Section 1](#section-1-pre-use-setup) for
-instructions to follow before using the application.
+This application is an interactive Jupyter Notebook where you submit an image of
+a dog for breed identification. Please skip to
+[Section 1](#section-1-pre-use-setup) for instructions to follow before using
+the application.
 
 If you already know how to use the application, please skip to
 [Section 2](#section-2-using-the-application).
 
-## Section 0: Application Setup
-
-No need to worry about this section. This is where the application setup occurs.
-After performing "Run All", jump to [Section 1](#section-1-pre-use-setup) to
-start interacting with the application.
-
 ## Section 1: Pre-use Setup
 
-This is where you will walk through the the process of using this application.
-The steps are as follows:
+These are the necessary steps to take prior when using the application:
 
 - Take a picture of the dog.
 - Crop the photo _(optional, but may help with accuracy)_.
@@ -33,9 +27,8 @@ The steps are as follows:
 
 ### Part A: Take a photo
 
-Take a picture of the dog you'd like to analyze. The clearer the photo of the
-dog, the likelihood of the algorithm correctly identifying the dog breed
-increases.
+Take a picture of the dog you'd like to analyze. The clearer the dog's photo,
+the likelihood of the algorithm correctly identifying the dog breed increases.
 
 Here's an example of a good photo:
 
@@ -79,7 +72,7 @@ Here's an example of a cropped photo:
 <br>
 
 **Have the cropped photo ready?
-([Continue to Section 2](#section-2-using-the-application))**
+([Continue to Section 2](#section-2-using-the-application))**.
 
 ## Section 2: Using the Application
 
@@ -104,5 +97,89 @@ You can also try out the examples provided in the _toClassify_ folder.
 
 ## Section 3: Troubleshooting
 
-If you're having problems trying to upload an image using the remote notebook
-application, take a look at the [User Guide](./UserGuide.md)
+If you're having problems uploading an image using the remote Notebook
+application, refer to the [User Guide](./UserGuide.md).
+
+## Section 4: Model Statistics
+
+Here are the machine learning model statistics. These are dynamically updated
+each time the model is trained to ensure consistency with the model and results
+posted.
+
+### Confusion Matrix
+
+Confusion matrices tell us how the model performed during the testing phase.
+
+- The x-axis identifies what dog breed the model predicted given an image.
+- The y-axis shows the count of each breed type.
+
+Reading from the top-left square diagonally to the bottom-right square, the
+matrix identifies how many of the predictions the model made were correct. The
+higher the value, the better the model accuracy.
+
+- Ex: The model correctly predicted a picture of a chihuahua as a chihuahua.
+
+The squares outside of the diagonal identify the amount of times the model
+incorrectly predicted a breed type. The lower the value the higher the model
+accuracy.
+
+- Ex: Out of **n** images provided of the breed _chihuahua_, the model
+  classified the images **k** times incorrectly as the breed _rottweiler_ or
+  _golden retriever_.
+
+This is the confusion matrix of the model when trained using a _Random Forest
+Classifier_:
+
+<figure>
+<img src="./confusion_matrix_results_rfc.png" alt="RFC Confusion Matrix" width=500>
+<figcaption>A confusion matrix of the model trained using Random Forest</figcaption>
+</figure>
+<br>
+
+This is the confusion matrix of the model when trained using a _Support Vector
+Classifier_:
+
+<figure>
+<img src="./confusion_matrix_results_svc.png" alt="SVC Confusion Matrix" width=500>
+<figcaption>A confusion matrix of the model trained using Support Vector Classifier</figcaption>
+</figure>
+<br>
+
+### Image Distribution
+
+Model training relied on numerous pictures of dogs in categories:
+
+- Chihuahua
+- Rottweiler
+- Golden Retriever The image distribution of the different dog breeds is similar
+  in size. However, the amount of sample images available was very low, and the
+  breed within the images varied greatly (i.e., short-haired chihuahuas and
+  long-haired chihuahuas, puppies and adults, fur color, etc.).
+
+<figure>
+<img src="./dog_breed_distribution.png" alt="Image Distribution Pie Chart" width=500>
+<figcaption>A pie chart of the image distribution used by the model during training.</figcaption>
+</figure>
+<br>
+
+### Decision Tree Model
+
+The model had no features to use during the training and testing phase of
+development. The model would classify dog breeds based on the pixel density of
+images. The model would learn to identify patterns in the pictures that would
+lead it to a conclusion for classifying a dog's breed. Decision trees are
+created during training and help the model branch to different conclusions when
+analyzing the pixel density of the images.
+
+During testing, the random forest classifier (RFC) often outperformed the
+support vector classifier (SVC), which led to the decision to use RFC for the
+developed model.
+
+This is an example decision tree used in the final version of the machine
+learning model:
+
+<figure>
+<img src="./rfc_random_decision_tree.png" alt="Decision Tree" width=500>
+<figcaption>A decision tree chosen at random for viewing the model's decisions when assessing an image.</figcaption>
+</figure>
+<br>
