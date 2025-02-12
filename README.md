@@ -36,7 +36,7 @@ Here's an example of a good photo:
 <img src="./good_example.jpg" width="300" alt="Good photo of dog">
 <figcaption>A clear photo of the dog showing distinct features.</figcaption>
 </figure>
-<br>
+<br><br>
 <!-- ![Good Photo of Dog](good_example.jpg "Something") -->
 
 Here's an example of a bad photo:
@@ -45,7 +45,7 @@ Here's an example of a bad photo:
 <img src="./bad_example.jpg" alt="Bad photo of dog" width="300">
 <figcaption>The dog is obstructed by objects in the photo.</figcaption>
 </figure>
-<br>
+<br><br>
 <!-- ![Bad Photo of Dog](bad_example.jpg) -->
 
 **Have a picture ready? Move onto [Part B](#part-b-crop-a-photo-optional)**
@@ -61,7 +61,7 @@ Here's an example of an uncropped photo:
 <img src="./uncropped_example.jpeg" width="300" alt="An uncropped photo">
 <figcaption>An uncropped photo of a dog and excessive background space.</figcaption>
 </figure>
-<br>
+<br><br>
 
 Here's an example of a cropped photo:
 
@@ -69,7 +69,7 @@ Here's an example of a cropped photo:
 <img src="./cropped_example.jpeg" alt="A cropped photo" width="300">
 <figcaption>A cropped photo focused on the dog, reduced background space.</figcaption>
 </figure>
-<br>
+<br><br>
 
 **Have the cropped photo ready?
 ([Continue to Section 2](#section-2-using-the-application))**.
@@ -134,7 +134,7 @@ Classifier_:
 <img src="./confusion_matrix_results_rfc.png" alt="RFC Confusion Matrix" width=500>
 <figcaption>A confusion matrix of the model trained using Random Forest</figcaption>
 </figure>
-<br>
+<br><br>
 
 This is the confusion matrix of the model when trained using a _Support Vector
 Classifier_:
@@ -143,7 +143,7 @@ Classifier_:
 <img src="./confusion_matrix_results_svc.png" alt="SVC Confusion Matrix" width=500>
 <figcaption>A confusion matrix of the model trained using Support Vector Classifier</figcaption>
 </figure>
-<br>
+<br><br>
 
 ### Image Distribution
 
@@ -151,16 +151,18 @@ Model training relied on numerous pictures of dogs in categories:
 
 - Chihuahua
 - Rottweiler
-- Golden Retriever The image distribution of the different dog breeds is similar
-  in size. However, the amount of sample images available was very low, and the
-  breed within the images varied greatly (i.e., short-haired chihuahuas and
-  long-haired chihuahuas, puppies and adults, fur color, etc.).
+- Golden Retriever
+
+The image distribution of the different dog breeds is similar in size. However,
+the amount of sample images available was very low, and the breed within the
+images varied greatly (i.e., short-haired chihuahuas and long-haired chihuahuas,
+puppies and adults, fur color, etc.).
 
 <figure>
 <img src="./dog_breed_distribution.png" alt="Image Distribution Pie Chart" width=500>
 <figcaption>A pie chart of the image distribution used by the model during training.</figcaption>
 </figure>
-<br>
+<br><br>
 
 ### Decision Tree Model
 
@@ -182,4 +184,4 @@ learning model:
 <img src="./rfc_random_decision_tree.png" alt="Decision Tree" width=500>
 <figcaption>A decision tree chosen at random for viewing the model's decisions when assessing an image.</figcaption>
 </figure>
-<br>
+<br><br>
