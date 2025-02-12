@@ -147,7 +147,9 @@ Classifier_:
 
 ### Image Distribution
 
-Model training relied on numerous pictures of dogs in categories:
+The image data used to train the model is based on the
+[Stanford Dogs Dataset](https://www.kaggle.com/datasets/jessicali9530/stanford-dogs-dataset).
+Model training relied on numerous pictures of dogs in the following categories:
 
 - Chihuahua
 - Rottweiler
