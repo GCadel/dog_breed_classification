@@ -62,11 +62,14 @@ Run all the cells in the notebook. <img src="./local_01.png" alt='Step 2'>
 ### Step 3
 
 Scroll to the bottom of **Section 2 in the notebook**. Click the `Upload Photo`
-button <img src="./local_02.png" alt='Step 3'>
+button.
+<img src="./local_02.png" alt='Step 3'>
 
 ### Step 4
 
-Choose a photo of a dog to be analyzed. <img src="./local_03.png" alt='Step 4'>
+Choose a photo of a dog to be analyzed. 
+
+<img src="./local_03.png" alt='Step 4'>
 
 ### Step 5
 
@@ -110,6 +113,7 @@ Verify your photo was uploaded.
 ### Step 5
 
 On the top menu bar, click `Kernel` > `Restart Kernel and Run All Cells...`
+
 **NOTE**: You may need to click on / highlight one of the notebook cells first if the option is not clickable.
 
 <img src="./run_remote_05.png" alt='Step 5'>
