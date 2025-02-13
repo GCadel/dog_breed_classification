@@ -110,6 +110,7 @@ Verify your photo was uploaded.
 ### Step 5
 
 On the top menu bar, click `Kernel` > `Restart Kernel and Run All Cells...`
+**NOTE**: You may need to click on / highlight one of the notebook cells first if the option is not clickable.
 
 <img src="./run_remote_05.png" alt='Step 5'>
 
