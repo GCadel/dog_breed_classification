@@ -29,6 +29,14 @@ for user interaction. Here is how the sections of the application are separated:
   [Stanford Dogs Dataset](https://www.kaggle.com/datasets/jessicali9530/stanford-dogs-dataset)
   and parsing the data for use in the machine learning algorithm. Generates the
   parsed data as [inputs_and_labels.pickle](./inputs_and_labels.pickle).
+  - Under the section **Image formatting helper methods** will be the variable
+    `reducedListLabels` which can be modified for more or less dog breeds and
+    breed types.
+  - After downloading and unzipping the dataset using cell 1-3, you can identify
+    available breed annotations in directory
+    `sd_dataset\annotations\Annotation`; an example annotation from a directory
+    may look like "n02097658-silky_terrier". Use the "silky_terrier" portion of
+    the directory name
 - [training.ipynb](./training.ipynb) is where the machine learning model is
   built and trained on the dataset. The final trained model is saved for use in
   [trained_models.p](./trained_models.p). This file also generates visual
@@ -62,12 +70,11 @@ Run all the cells in the notebook. <img src="./local_01.png" alt='Step 2'>
 ### Step 3
 
 Scroll to the bottom of **Section 2 in the notebook**. Click the `Upload Photo`
-button.
-<img src="./local_02.png" alt='Step 3'>
+button. <img src="./local_02.png" alt='Step 3'>
 
 ### Step 4
 
-Choose a photo of a dog to be analyzed. 
+Choose a photo of a dog to be analyzed.
 
 <img src="./local_03.png" alt='Step 4'>
 
@@ -114,7 +121,8 @@ Verify your photo was uploaded.
 
 On the top menu bar, click `Kernel` > `Restart Kernel and Run All Cells...`
 
-**NOTE**: You may need to click on / highlight one of the notebook cells first if the option is not clickable.
+**NOTE**: You may need to click on / highlight one of the notebook cells first
+if the option is not clickable.
 
 <img src="./run_remote_05.png" alt='Step 5'>
 
