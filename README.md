@@ -2,30 +2,28 @@
 
 An image classification application used to identify a dog breed.
 
-Open the application here:
+Replit Access
+
+> https://replit.com/@gcadelm/dogbreedclassification
+
+~~Binder Access~~ **Binder instance is not available as of 02/16/2025**:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GCadel/dog_breed_classification/HEAD?urlpath=%2Fdoc%2Ftree%2Fmain.ipynb)
 
 ## How to use this application
 
-This application is an interactive Jupyter Notebook where you submit an image of
-a dog for breed identification. Please skip to
-[Section 1](#section-1-pre-use-setup) for instructions to follow before using
-the application.
+All instructions for running the application can be found in the
+[User Guide](./UserGuide.md)
 
-If you already know how to use the application, please skip to
-[Section 2](#section-2-using-the-application).
+## Image Setup
 
-## Section 1: Pre-use Setup
-
-These are the necessary steps to take prior when using the application:
+This application has some sample images available. Here's what you need to do if
+you want to use your own images:
 
 - Take a picture of the dog.
 - Crop the photo _(optional, but may help with accuracy)_.
-- Upload the photo to the folder `toClassify`.
-- Click the **Analyze Dog** button.
 
-### Part A: Take a photo
+### Taking a photo
 
 Take a picture of the dog you'd like to analyze. The clearer the dog's photo,
 the likelihood of the algorithm correctly identifying the dog breed increases.
@@ -48,12 +46,10 @@ Here's an example of a bad photo:
 <br><br>
 <!-- ![Bad Photo of Dog](bad_example.jpg) -->
 
-**Have a picture ready? Move onto [Part B](#part-b-crop-a-photo-optional)**
-
-### Part B: Crop a photo (optional)
+### Crop the photo (optional)
 
 While cropping the photo is optional, it will help increase the accuracy of the
-photo analysis. ([Skip this step](#section-2-using-the-application))
+photo analysis.
 
 Here's an example of an uncropped photo:
 
@@ -71,29 +67,21 @@ Here's an example of a cropped photo:
 </figure>
 <br><br>
 
-**Have the cropped photo ready?
-([Continue to Section 2](#section-2-using-the-application))**.
-
 ## Section 2: Using the Application
 
-### Upload a photo
+### Photo Requirements
 
-Click on the button labeled **Upload** and select the photo you plan to use.
-Currently, this application only accepts '.jpg', '.jpeg', and '.png'.
+Currently, the application only accepts the following image formats:
 
-### Analyze the photo
+- '.jpg'
+- '.jpeg'
+- '.png'
 
-Finally, we'll analyze the photo of the dog to identify its breed. Click on the
-**Analyze Dog** button. You'll see the image you've selected and the predicted
-breed the program has produced.
-
-**NOTE**: Currently, the algorithm only supports 3 unique breeds:
+Currently, the algorithm only supports 3 unique breeds:
 
 - Rottweilers
 - Golden Retrievers
 - Chihuahuas
-
-You can also try out the examples provided in the _toClassify_ folder.
 
 ## Section 3: Troubleshooting
 
