@@ -1,0 +1,11 @@
+run = "python -m notebook --ip=0.0.0.0 --port=3000 --NotebookApp.token='' --NotebookApp.password='' --allow-root --no-browser"
+modules = ["python-3.12"]
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "python -m notebook --ip=0.0.0.0 --port=3000 --NotebookApp.token='' --NotebookApp.password='' --allow-root --no-browser"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
